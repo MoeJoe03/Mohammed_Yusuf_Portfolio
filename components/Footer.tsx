@@ -60,7 +60,7 @@ export default function Footer() {
     navigator.clipboard.writeText("myusufjogee@gmail.com");
     setEmailCopied(true);
     setTimeout(() => setEmailCopied(false), 2400);
-    window.location.href = "mailto:myusufjogee@gmail.com";
+    window.open("https://wa.me/27645808094", "_blank");
   };
 
   const handleCopyPhone = (e: React.MouseEvent) => {
@@ -73,7 +73,7 @@ export default function Footer() {
 
   const contactLinks = [
     { label: "WhatsApp", href: "https://wa.me/27645808094" },
-    { label: "Email", href: "mailto:myusufjogee@gmail.com" },
+    { label: "Email", href: "https://wa.me/27645808094" },
   ];
 
   return (

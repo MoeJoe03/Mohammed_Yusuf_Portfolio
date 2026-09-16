@@ -64,11 +64,7 @@ export default function Navbar({ activeSection = 'hero', onNavigate, onOpenResum
   };
 
   const handleSayHiClick = () => {
-    if (isSubpage) {
-      router.push('/#contact');
-    } else if (onNavigate) {
-      onNavigate('contact');
-    }
+    window.open("https://wa.me/27645808094", "_blank");
   };
 
   return (

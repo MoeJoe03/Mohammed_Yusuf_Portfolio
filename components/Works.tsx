@@ -5,6 +5,9 @@ import Link from 'next/link';
 import { motion } from 'motion/react';
 import { PROJECTS, Project } from '@/lib/data';
 
+// Toggle to show/hide "View all work" buttons
+const SHOW_VIEW_ALL_WORK = false;
+
 interface WorksProps {
   onSelectProject: (project: Project) => void;
   onViewAll?: () => void;
@@ -37,19 +40,21 @@ export default function Works({ onSelectProject }: WorksProps) {
             </p>
           </div>
 
-          {/* Desktop "View all work" button */}
-          <div className="hidden md:inline-flex">
-            <div className="relative group p-[2px] rounded-full">
-              <span className="absolute inset-0 rounded-full accent-gradient opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <Link
-                href="/work"
-                className="relative rounded-full text-xs font-mono uppercase tracking-wider px-6 py-3 border border-stroke bg-surface hover:bg-bg text-text-primary transition-all duration-300 flex items-center gap-2 group-hover:border-transparent"
-              >
-                <span>View all work</span>
-                <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
-              </Link>
+          {/* Desktop "View all work" button - hidden for now */}
+          {SHOW_VIEW_ALL_WORK && (
+            <div className="hidden md:inline-flex">
+              <div className="relative group p-[2px] rounded-full">
+                <span className="absolute inset-0 rounded-full accent-gradient opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <Link
+                  href="/work"
+                  className="relative rounded-full text-xs font-mono uppercase tracking-wider px-6 py-3 border border-stroke bg-surface hover:bg-bg text-text-primary transition-all duration-300 flex items-center gap-2 group-hover:border-transparent"
+                >
+                  <span>View all work</span>
+                  <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
+                </Link>
+              </div>
             </div>
-          </div>
+          )}
         </motion.div>
 
         {/* Bento Grid: 12 cols, alternating spans 7 / 5 / 5 / 7 */}
@@ -133,16 +138,18 @@ export default function Works({ onSelectProject }: WorksProps) {
           })}
         </div>
 
-        {/* Mobile "View all work" button */}
-        <div className="mt-8 flex justify-center md:hidden">
-          <Link
-            href="/work"
-            className="rounded-full text-xs font-mono uppercase tracking-wider px-6 py-3 border border-stroke bg-surface hover:bg-bg text-text-primary transition-all duration-300 flex items-center gap-2"
-          >
-            <span>View all work ({PROJECTS.length}+)</span>
-            <span>→</span>
-          </Link>
-        </div>
+        {/* Mobile "View all work" button - hidden for now */}
+        {SHOW_VIEW_ALL_WORK && (
+          <div className="mt-8 flex justify-center md:hidden">
+            <Link
+              href="/work"
+              className="rounded-full text-xs font-mono uppercase tracking-wider px-6 py-3 border border-stroke bg-surface hover:bg-bg text-text-primary transition-all duration-300 flex items-center gap-2"
+            >
+              <span>View all work ({PROJECTS.length}+)</span>
+              <span>→</span>
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );

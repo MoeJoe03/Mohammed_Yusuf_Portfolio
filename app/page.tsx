@@ -73,7 +73,7 @@ export default function Home() {
       {/* Hero Section */}
       <Hero
         onSeeWorks={() => handleNavigate('work')}
-        onReachOut={() => handleNavigate('contact')}
+        onReachOut={() => window.open("https://wa.me/27645808094", "_blank")}
       />
 
       {/* Selected Works (Bento Grid) */}

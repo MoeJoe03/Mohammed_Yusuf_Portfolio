@@ -48,7 +48,9 @@ export default function Services() {
             <div className="relative group p-[2px] rounded-full">
               <span className="absolute inset-0 rounded-full accent-gradient opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <a
-                href="#contact"
+                href="https://wa.me/27645808094"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="relative rounded-full text-xs font-mono uppercase tracking-wider px-6 py-3 border border-stroke bg-surface hover:bg-bg text-text-primary transition-all duration-300 flex items-center gap-2 group-hover:border-transparent focus:outline-none"
               >
                 <span>Book a consultation</span>
@@ -123,7 +125,9 @@ export default function Services() {
         {/* Mobile Consultation Button */}
         <div className="mt-8 flex justify-center md:hidden">
           <a
-            href="#contact"
+            href="https://wa.me/27645808094"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-full text-xs font-mono uppercase tracking-wider px-6 py-3 border border-stroke bg-surface hover:bg-bg text-text-primary transition-all duration-300 flex items-center gap-2"
           >
             <span>Book a consultation</span>
