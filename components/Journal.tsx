@@ -2,8 +2,8 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { ArrowRight, ArrowUpRight, CheckCircle2, Sparkles } from 'lucide-react';
 import { SERVICES, ServiceItem } from '@/lib/data';
-import { CheckCircle2, Sparkles, ArrowUpRight } from 'lucide-react';
 
 export default function Services() {
   const [selectedService, setSelectedService] = useState<ServiceItem | null>(null);
@@ -54,7 +54,7 @@ export default function Services() {
                 className="relative rounded-full text-xs font-mono uppercase tracking-wider px-6 py-3 border border-stroke bg-surface hover:bg-bg text-text-primary transition-all duration-300 flex items-center gap-2 group-hover:border-transparent focus:outline-none"
               >
                 <span>Book a consultation</span>
-                <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
+                <span className="transition-transform duration-200 group-hover:translate-x-1"><ArrowRight className="w-3.5 h-3.5" /></span>
               </a>
             </div>
           </div>
@@ -112,8 +112,8 @@ export default function Services() {
                   </div>
 
                   <div className="w-8 h-8 rounded-full border border-stroke flex items-center justify-center text-xs text-muted group-hover:text-text-primary group-hover:border-white/30 group-hover:bg-stroke/40 transition-all duration-300">
-                    <span className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
-                      ↗
+                    <span className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 flex items-center justify-center">
+                      <ArrowUpRight className="w-4 h-4" />
                     </span>
                   </div>
                 </div>
@@ -131,7 +131,7 @@ export default function Services() {
             className="rounded-full text-xs font-mono uppercase tracking-wider px-6 py-3 border border-stroke bg-surface hover:bg-bg text-text-primary transition-all duration-300 flex items-center gap-2"
           >
             <span>Book a consultation</span>
-            <span>→</span>
+            <ArrowRight className="w-3.5 h-3.5" />
           </a>
         </div>
       </div>

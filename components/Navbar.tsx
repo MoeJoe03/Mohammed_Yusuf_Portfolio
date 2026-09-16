@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { ArrowUpRight } from 'lucide-react';
 
 // Toggle to hide or unhide resume navigation tab
 const SHOW_RESUME = false;
@@ -129,8 +130,8 @@ export default function Navbar({ activeSection = 'hero', onNavigate, onOpenResum
             className="relative text-xs sm:text-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2 bg-surface backdrop-blur-md text-text-primary hover:text-white flex items-center gap-1.5 focus:outline-none transition-colors"
           >
             <span>Say hi</span>
-            <span className="text-[13px] leading-none transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
-              ↗
+            <span className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+              <ArrowUpRight className="w-3.5 h-3.5" />
             </span>
           </button>
         </div>

@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Hls from 'hls.js';
 import gsap from 'gsap';
+import { ArrowDown, ArrowUpRight } from 'lucide-react';
 
 interface HeroProps {
   onSeeWorks: () => void;
@@ -147,7 +148,7 @@ export default function Hero({ onSeeWorks, onReachOut }: HeroProps) {
               className="relative rounded-full text-sm px-7 py-3.5 bg-text-primary text-bg font-medium transition-all duration-300 hover:scale-105 group-hover:bg-bg group-hover:text-text-primary focus:outline-none flex items-center gap-2"
             >
               <span>See Works</span>
-              <span className="text-xs">↓</span>
+              <ArrowDown className="w-4 h-4" />
             </button>
           </div>
 
@@ -160,7 +161,7 @@ export default function Hero({ onSeeWorks, onReachOut }: HeroProps) {
               className="relative rounded-full text-sm px-7 py-3.5 border-2 border-stroke bg-bg text-text-primary font-medium transition-all duration-300 hover:scale-105 group-hover:border-transparent focus:outline-none flex items-center gap-1.5"
             >
               <span>Reach out...</span>
-              <span className="text-xs">↗</span>
+              <ArrowUpRight className="w-4 h-4" />
             </button>
           </div>
         </div>

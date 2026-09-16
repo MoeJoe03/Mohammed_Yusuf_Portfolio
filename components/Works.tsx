@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'motion/react';
+import { ArrowRight } from 'lucide-react';
 import { PROJECTS, Project } from '@/lib/data';
 
 // Toggle to show/hide "View all work" buttons
@@ -50,7 +51,7 @@ export default function Works({ onSelectProject }: WorksProps) {
                   className="relative rounded-full text-xs font-mono uppercase tracking-wider px-6 py-3 border border-stroke bg-surface hover:bg-bg text-text-primary transition-all duration-300 flex items-center gap-2 group-hover:border-transparent"
                 >
                   <span>View all work</span>
-                  <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
+                  <span className="transition-transform duration-200 group-hover:translate-x-1"><ArrowRight className="w-3.5 h-3.5" /></span>
                 </Link>
               </div>
             </div>
@@ -146,7 +147,7 @@ export default function Works({ onSelectProject }: WorksProps) {
               className="rounded-full text-xs font-mono uppercase tracking-wider px-6 py-3 border border-stroke bg-surface hover:bg-bg text-text-primary transition-all duration-300 flex items-center gap-2"
             >
               <span>View all work ({PROJECTS.length}+)</span>
-              <span>→</span>
+              <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
         )}

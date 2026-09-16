@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Hls from 'hls.js';
 import gsap from 'gsap';
+import { Mail, Check, ArrowUpRight } from 'lucide-react';
 
 const HLS_SOURCE = "https://stream.mux.com/Aa02T7oM1wH5Mk5EEVDYhbZ1ChcdhRsS2m1NYyx4Ua1g.m3u8";
 
@@ -124,10 +125,14 @@ export default function Footer() {
                 onClick={handleCopyEmail}
                 className="relative w-full sm:w-auto px-7 sm:px-10 py-4 sm:py-4.5 rounded-full bg-surface border border-stroke text-sm sm:text-base font-medium text-text-primary hover:text-white flex items-center justify-between sm:justify-center gap-3 transition-all duration-300 group-hover:border-transparent group-hover:scale-105 shadow-xl"
               >
-                <span className="font-mono text-xs text-muted">✉</span>
+                <Mail className="w-4 h-4 text-muted" />
                 <span className="truncate">myusufjogee@gmail.com</span>
-                <span className="text-xs font-mono text-accent shrink-0">
-                  {emailCopied ? "Copied! ✓" : "↗"}
+                <span className="text-xs font-mono text-accent shrink-0 flex items-center gap-1">
+                  {emailCopied ? (
+                    <>Copied! <Check className="w-3.5 h-3.5 inline" /></>
+                  ) : (
+                    <ArrowUpRight className="w-4 h-4" />
+                  )}
                 </span>
               </button>
             </div>
@@ -148,8 +153,12 @@ export default function Footer() {
                   <span className="font-mono text-xs text-emerald-400 tracking-wider">WhatsApp</span>
                 </span>
                 <span className="font-mono font-medium tracking-wide">064 580 8094</span>
-                <span className="text-xs font-mono text-emerald-400 shrink-0">
-                  {phoneCopied ? "Copied & Opening... ✓" : "↗"}
+                <span className="text-xs font-mono text-emerald-400 shrink-0 flex items-center gap-1">
+                  {phoneCopied ? (
+                    <>Copied & Opening... <Check className="w-3.5 h-3.5 inline" /></>
+                  ) : (
+                    <ArrowUpRight className="w-4 h-4" />
+                  )}
                 </span>
               </button>
             </div>

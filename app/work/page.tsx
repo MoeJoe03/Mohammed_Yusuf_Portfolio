@@ -397,7 +397,7 @@ export default function AllWorkPage() {
                   {/* Action Link */}
                   <div className="md:col-span-1 text-right flex justify-end">
                     <span className="inline-flex items-center justify-center w-8 h-8 rounded-full border border-stroke group-hover:border-white/30 group-hover:bg-white/10 transition-all text-xs text-muted group-hover:text-text-primary">
-                      ↗
+                      <ArrowUpRight className="w-4 h-4" />
                     </span>
                   </div>
                 </div>
