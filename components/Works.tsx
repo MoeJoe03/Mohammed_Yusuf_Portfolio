@@ -3,11 +3,11 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'motion/react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import { PROJECTS, Project } from '@/lib/data';
 
 // Toggle to show/hide "View all work" buttons
-const SHOW_VIEW_ALL_WORK = false;
+const SHOW_VIEW_ALL_WORK = true;
 
 interface WorksProps {
   onSelectProject: (project: Project) => void;
@@ -104,6 +104,7 @@ export default function Works({ onSelectProject }: WorksProps) {
                   <p className="text-xs text-text-primary/80 mt-4 max-w-sm line-clamp-2">
                     {project.subtitle}
                   </p>
+
                   <div className="flex gap-2 mt-4 flex-wrap justify-center">
                     {project.tags.slice(0, 3).map((tag) => (
                       <span
@@ -117,12 +118,9 @@ export default function Works({ onSelectProject }: WorksProps) {
                 </div>
 
                 {/* Normal State Card Content (Top tag & Bottom info) */}
-                <div className="relative z-0 flex justify-between items-start">
+                <div className="relative z-20 flex justify-between items-start w-full">
                   <span className="text-[11px] font-mono uppercase tracking-wider text-text-primary/70 bg-bg/60 backdrop-blur-sm border border-stroke px-3 py-1 rounded-full">
                     {project.category}
-                  </span>
-                  <span className="text-xs font-mono text-text-primary/70 bg-bg/60 backdrop-blur-sm border border-stroke px-3 py-1 rounded-full">
-                    {project.year}
                   </span>
                 </div>
 

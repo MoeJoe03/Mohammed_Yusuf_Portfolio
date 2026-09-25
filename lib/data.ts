@@ -7,6 +7,8 @@ export interface Project {
   colSpan: string; // "md:col-span-7" or "md:col-span-5"
   image: string;
   modalImage?: string;
+  siteUrl?: string;
+  link?: string;
   description: string;
   deliverables?: string;
   detailedDescription?: string;
@@ -57,6 +59,8 @@ export const PROJECTS: Project[] = [
     colSpan: "md:col-span-7",
     image: "https://qnelsjzfuynqotkwojxv.supabase.co/storage/v1/object/public/portfolio/images/car%20concept.gif",
     modalImage: "https://qnelsjzfuynqotkwojxv.supabase.co/storage/v1/object/public/portfolio/images/car%20concept.gif",
+    siteUrl: "https://automotive-motion.vercel.app",
+    link: "https://automotive-motion.vercel.app",
     description: "An immersive 3D web experience for the iconic 911 Turbo, blending cinematic scroll motion, realistic lighting, and premium automotive storytelling.",
     deliverables: "Interactive responsive car website concept featuring a scroll-driven 3D Porsche model, hero banner, feature sections, animated model transitions, realistic material lighting, and final call-to-action section.",
     tags: [
@@ -73,19 +77,29 @@ export const PROJECTS: Project[] = [
     role: "Creative Technologist & 3D Web Developer"
   },
   {
-    id: "urban-architecture",
-    title: "The Artisan Butcher",
-    subtitle: "Shopify storefront overhaul & bespoke category experience",
-    category: "Shopify / E-Com",
-    year: "2026",
+    id: "sunshine-thai-massage",
+    title: "Sunshine Thai Massage & Spa",
+    subtitle: "Luxury Spa & Wellness Experiences for Rest, Renewal, and Balance",
+    category: "Spa & Wellness",
+    year: "2025",
     colSpan: "md:col-span-5",
-    image: "https://qnelsjzfuynqotkwojxv.supabase.co/storage/v1/object/public/portfolio/images/card_image.jpeg",
-    modalImage: "https://qnelsjzfuynqotkwojxv.supabase.co/storage/v1/object/public/portfolio/images/inside_card.png",
-    description: "A comprehensive Shopify e-commerce transformation and digital storefront overhaul for an artisanal butchery. Restructured product categories, created an interactive 'Shop by Category' section, redesigned the hero banner, elevated the About & heritage storytelling, and updated the contact & wholesale ordering experience.",
-    detailedDescription: "Key deliverables and storefront enhancements:\n• Shop by Category Section: Engineered a visual cuts browser allowing customers to quickly navigate prime selections including Dry-Aged Beef, Hand-Trimmed Steaks, Free-Range Poultry, and Artisan Charcuterie.\n• Hero Redesign: Built a high-impact, cinematic header spotlighting seasonal butcher cuts, provenance standards, and local delivery assurances.\n• Product Categories: Restructured catalog taxonomy, pricing tiers, cut weights, and culinary preparation guides.\n• About Section: Elevated brand heritage, humane farm sourcing philosophy, and generations of artisanal butcher craft.\n• Contact & Inquiries: Streamlined custom cut inquiries, catering requests, and customer support channels.",
-    tags: ["Shopify", "E-Commerce", "Shop By Category", "Hero Redesign", "About & Heritage", "Contact Portal"],
-    client: "Artisan Butcher & Provisions",
-    role: "Shopify Architect & UI/UX"
+    image: "https://qnelsjzfuynqotkwojxv.supabase.co/storage/v1/object/public/Electrixel/our%20work/sunshine/website_development_johannesburg_spa_website.jpeg",
+    modalImage: "https://qnelsjzfuynqotkwojxv.supabase.co/storage/v1/object/public/portfolio/images/sunshine.JPG",
+    siteUrl: "https://sunshinethaimassage.co.za",
+    link: "https://sunshinethaimassage.co.za",
+    description: "Luxury Spa & Wellness Experiences for Rest, Renewal, and Balance. An inviting, calming digital experience created to showcase holistic therapies and facilitate seamless appointment bookings.",
+    deliverables: "A responsive spa and wellness website designed to showcase services, pricing, monthly specials, and appointment booking. The project includes:\n• Hero section and brand storytelling\n• Treatment offerings and service highlights\n• Promotional special cards\n• Pricing and contact sections\n• Book appointment CTA and mobile-friendly layout",
+    tags: [
+      "Vite",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "React Router",
+      "Vercel Deployment"
+    ],
+    client: "Sunshine Thai Massage & Spa",
+    role: "Lead Frontend Developer & Designer"
   },
   {
     id: "human-perspective",
@@ -96,6 +110,8 @@ export const PROJECTS: Project[] = [
     colSpan: "md:col-span-5",
     image: "https://qnelsjzfuynqotkwojxv.supabase.co/storage/v1/object/public/portfolio/images/insta%207.jpeg",
     modalImage: "https://qnelsjzfuynqotkwojxv.supabase.co/storage/v1/object/public/portfolio/images/heroo.JPG",
+    siteUrl: "https://saiiiw.co.za",
+    link: "https://saiiiw.co.za",
     description: "A compassionate, responsive digital platform connecting individuals with Islamically integrated counselling, faith-aligned therapy modalities, and holistic mental wellness care.",
     deliverables: "Responsive interactive web platform for an Islamic mental health practice, including:\n• Streamlined client booking and consultation inquiry flow\n• Specialized service pathways (individual, couples, youth counselling)\n• Clinical team profiles, credentials, and practice philosophy\n• Faith-grounded mental health psychoeducation & articles\n• Accessible, calming aesthetic with responsive mobile-first design",
     tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Lucide React"],
@@ -111,6 +127,8 @@ export const PROJECTS: Project[] = [
     colSpan: "md:col-span-7",
     image: "https://qnelsjzfuynqotkwojxv.supabase.co/storage/v1/object/public/portfolio/images/golf%20cover_.gif",
     modalImage: "https://qnelsjzfuynqotkwojxv.supabase.co/storage/v1/object/public/portfolio/images/golf%20cover_.gif",
+    siteUrl: "https://golf-website-mu.vercel.app",
+    link: "https://golf-website-mu.vercel.app",
     description: "A cinematic golf club website with scroll-driven motion, premium membership flows, coaching sections, and an immersive course experience.",
     deliverables: "Responsive interactive marketing website for a premium golf club, including:\n• Scroll-animated 70-frame hero sequence\n• Membership pricing and plan selection\n• Coaching and golf improvement sections\n• Pro gallery and testimonials\n• Contact / booking modal\n• Smooth scrolling and polished motion interactions\n• Optimized golf imagery and video footer",
     tags: [
@@ -131,64 +149,89 @@ export const PROJECTS: Project[] = [
 export const ALL_PROJECTS: Project[] = [
   ...PROJECTS,
   {
-    id: "atelier-vaucanson",
-    title: "Atelier Vaucanson",
+    id: "movex",
+    title: "Movex",
     subtitle: "Precision luxury identity & interactive mechanical movement visualizer for haute horlogerie.",
     category: "Luxury & Brand Systems",
     year: "2025",
     colSpan: "md:col-span-7",
-    image: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1600&q=85",
-    modalImage: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1600&q=85",
+    image: "https://qnelsjzfuynqotkwojxv.supabase.co/storage/v1/object/public/Electrixel/our%20work/movex/website_design_jhb_logistics_company_web_development.jpeg",
+    modalImage: "https://qnelsjzfuynqotkwojxv.supabase.co/storage/v1/object/public/portfolio/images/movex.gif",
+    siteUrl: "https://movex-concept.vercel.app",
+    link: "https://movex-concept.vercel.app",
     description: "Complete digital identity re-architecture, bespoke variable typography, and an interactive 3D tour of hand-finished tourbillon escapements for a Swiss independent micro-manufacture.",
     deliverables: "Interactive 3D mechanical movement explorer with exploded component inspection, bespoke typography system, private client allocation portal, and tactile packaging finish guidelines.",
     tags: ["Next.js", "Three.js", "WebGL Shaders", "Variable Typography", "Tailwind CSS"],
-    client: "Atelier Vaucanson Geneva",
+    client: "Movex Geneva",
     role: "Lead Digital Architect & Brand Designer"
   },
   {
-    id: "monolith-audio",
-    title: "Monolith Soundscapes",
-    subtitle: "Algorithmic sound synthesis platform & reactive web ambient soundboard.",
-    category: "Creative Code & Audio",
+    id: "aurelia-home",
+    title: "Aurelia Home",
+    subtitle: "Curated luxury furniture and interiors for refined living",
+    category: "E-Commerce & Interior Design",
     year: "2025",
     colSpan: "md:col-span-5",
-    image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1600&q=85",
-    modalImage: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1600&q=85",
-    description: "An experimental audio-visual soundboard running entirely on the Web Audio API with real-time FFT frequency mapping, harmonic node routing, and generative canvas waveforms.",
-    deliverables: "Polyphonic synthesizer engine, real-time node graph editor, spatial binaural panning, dynamic waveform visualizer, and preset sharing via encrypted URL hash.",
-    tags: ["Web Audio API", "HTML5 Canvas", "TypeScript", "Tailwind CSS", "DSP Processing"],
-    client: "Acoustic Explorations Lab",
-    role: "Sound Architect & Full-Stack Developer"
+    image: "https://qnelsjzfuynqotkwojxv.supabase.co/storage/v1/object/public/Electrixel/our%20work/aurelia/website_jhb_furniture_site_.jpeg",
+    modalImage: "https://qnelsjzfuynqotkwojxv.supabase.co/storage/v1/object/public/portfolio/images/2026-09-2517-24-33-ezgif.com-video-to-gif-converter.gif",
+    siteUrl: "https://auriela-home-concept.vercel.app",
+    link: "https://auriela-home-concept.vercel.app",
+    description: "Curated luxury furniture and interiors for refined living. A boutique digital flagship engineered to evoke high-end editorial calm with modern conversion-focused architectural UX.",
+    deliverables: "A premium e-commerce storefront and brand experience for a luxury home décor business, featuring:\n• Immersive hero section and editorial-style landing page\n• Category-based browsing for rugs, curtains, lighting, and furniture\n• Curated product listings and new arrivals\n• Shopping cart and checkout flow\n• Responsive design optimized for mobile and desktop\n• Boutique luxury aesthetic with modern conversion-focused UX",
+    tags: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "PostCSS",
+      "Lucide React",
+      "Motion"
+    ],
+    client: "Aurelia Home",
+    role: "Lead Creative Developer & E-Commerce Architect"
   },
   {
-    id: "kryptos-telemetry",
-    title: "Kryptos Telemetry",
-    subtitle: "Sub-millisecond market execution dashboard & real-time order book visualizer.",
-    category: "Fintech & Data Systems",
-    year: "2024",
+    id: "razaks-butcher",
+    title: "Razaks Butcher",
+    subtitle: "Shopify storefront overhaul & bespoke category experience",
+    category: "Shopify / E-Com",
+    year: "2026",
     colSpan: "md:col-span-5",
-    image: "https://images.unsplash.com/photo-1642543492481-44e81e3914a7?auto=format&fit=crop&w=1600&q=85",
-    modalImage: "https://images.unsplash.com/photo-1642543492481-44e81e3914a7?auto=format&fit=crop&w=1600&q=85",
-    description: "Engineered a low-latency dark cockpit telemetry interface for quantitative institutional desks. Processes live depth-of-market feeds with zero frame drops.",
-    deliverables: "WebSocket streaming pipeline handling 5,000+ ticks/sec, high-density order book canvas, liquidity heatmap visualizer, customizable multi-window workspace layout.",
-    tags: ["React", "TypeScript", "WebSockets", "D3.js", "Canvas 2D", "Tailwind CSS"],
-    client: "Kryptos Quantitative Capital",
-    role: "Lead UI/UX Engineer"
+    image: "https://qnelsjzfuynqotkwojxv.supabase.co/storage/v1/object/public/portfolio/images/card_image.jpeg",
+    modalImage: "https://qnelsjzfuynqotkwojxv.supabase.co/storage/v1/object/public/portfolio/images/inside_card.png",
+    siteUrl: "https://razaksmeat.co.za",
+    link: "https://razaksmeat.co.za",
+    description: "A comprehensive Shopify e-commerce transformation and digital storefront overhaul for Razaks Butcher. Restructured product categories, created an interactive 'Shop by Category' section, redesigned the hero banner, elevated the About & heritage storytelling, and updated the contact & wholesale ordering experience.",
+    detailedDescription: "Key deliverables and storefront enhancements:\n• Shop by Category Section: Engineered a visual cuts browser allowing customers to quickly navigate prime selections including Dry-Aged Beef, Hand-Trimmed Steaks, Free-Range Poultry, and Artisan Charcuterie.\n• Hero Redesign: Built a high-impact, cinematic header spotlighting seasonal butcher cuts, provenance standards, and local delivery assurances.\n• Product Categories: Restructured catalog taxonomy, pricing tiers, cut weights, and culinary preparation guides.\n• About Section: Elevated brand heritage, humane farm sourcing philosophy, and generations of artisanal butcher craft.\n• Contact & Inquiries: Streamlined custom cut inquiries, catering requests, and customer support channels.",
+    tags: ["Shopify", "E-Commerce", "Shop By Category", "Hero Redesign", "About & Heritage", "Contact Portal"],
+    client: "Razaks Butcher",
+    role: "Shopify Architect & UI/UX"
   },
   {
-    id: "venice-biennale",
-    title: "Pavilion 404",
-    subtitle: "Virtual architectural exhibition with spatial navigation and volumetric photogrammetry.",
-    category: "Spatial Computing / 3D",
-    year: "2024",
+    id: "pat-press",
+    title: "Pat Press",
+    subtitle: "Modern Print Studio Website for Branding, Design, and Creative Production",
+    category: "Branding & Print Production",
+    year: "2025",
     colSpan: "md:col-span-7",
-    image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1600&q=85",
-    modalImage: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1600&q=85",
-    description: "A collaborative digital twin pavilion for the Venice Biennale collateral, allowing remote visitors to explore physical architectural installations with binaural spatial audio.",
-    deliverables: "Interactive 3D architectural walk-through, progressive level-of-detail model streaming, curatorial audio narration zones, and mobile WebXR inspection mode.",
-    tags: ["Three.js", "WebXR", "GLSL Shaders", "Spatial Audio", "React"],
-    client: "Venice Biennale Collateral",
-    role: "Creative Technologist"
+    image: "https://qnelsjzfuynqotkwojxv.supabase.co/storage/v1/object/public/Electrixel/our%20work/pat%20press/web_design_johannesburg_print_shop.jpeg",
+    modalImage: "https://qnelsjzfuynqotkwojxv.supabase.co/storage/v1/object/public/portfolio/images/pat%20press.JPG",
+    siteUrl: "https://patpress.co.za",
+    link: "https://patpress.co.za",
+    description: "Modern Print Studio Website for Branding, Design, and Creative Production. Built with high tactile precision to showcase premium paper stocks, finishes, and conversion-focused creative inquiries.",
+    deliverables: "A responsive, conversion-focused business website for a print and design studio, featuring:\n• Hero section and brand positioning\n• Services overview\n• Portfolio/gallery showcase\n• Customer testimonials\n• About section\n• Contact and inquiry call-to-action",
+    tags: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Lucide React",
+      "ESLint",
+      "PostCSS / Autoprefixer"
+    ],
+    client: "Pat Press Studio",
+    role: "Digital Designer & Creative Developer"
   }
 ];
 
