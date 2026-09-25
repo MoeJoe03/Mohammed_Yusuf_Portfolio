@@ -59,8 +59,8 @@ export const PROJECTS: Project[] = [
     colSpan: "md:col-span-7",
     image: "https://qnelsjzfuynqotkwojxv.supabase.co/storage/v1/object/public/portfolio/images/car%20concept.gif",
     modalImage: "https://qnelsjzfuynqotkwojxv.supabase.co/storage/v1/object/public/portfolio/images/car%20concept.gif",
-    siteUrl: "https://automotive-motion.vercel.app",
-    link: "https://automotive-motion.vercel.app",
+    siteUrl: "https://porsche-3-d-website-rose.vercel.app",
+    link: "https://porsche-3-d-website-rose.vercel.app",
     description: "An immersive 3D web experience for the iconic 911 Turbo, blending cinematic scroll motion, realistic lighting, and premium automotive storytelling.",
     deliverables: "Interactive responsive car website concept featuring a scroll-driven 3D Porsche model, hero banner, feature sections, animated model transitions, realistic material lighting, and final call-to-action section.",
     tags: [
